@@ -6,15 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/TypeGasolinePrice"
-        android:layout_width="244dp"
-        android:layout_height="37dp"
-        android:text="Type Gasoline Price"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="112dp" />
+    <Button
+        android:id="@+id/btnGasoline"
+        android:layout_width="134dp"
+        android:layout_height="39dp"
+        android:background="@color/colorPrimary"
+        android:text="Calculate"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="299dp" />
 
     <TextView
         android:id="@+id/GasolinePriceInput"
@@ -24,23 +30,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="267dp" />
-
-    <Button
-        android:id="@+id/btnGasoline"
-        android:layout_width="134dp"
-        android:layout_height="39dp"
-        android:background="@color/colorPrimary"
-        android:text="Calculate"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="355dp" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="275dp"
-        android:layout_height="40dp"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="191dp" />
+        tools:layout_editor_absoluteY="354dp" />
 
     <TextView
         android:id="@+id/txtResult"
@@ -48,7 +38,26 @@
         android:layout_height="40dp"
         android:text="TextView"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="465dp" />
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <TextView
+        android:id="@+id/TypeGasolinePrice"
+        android:layout_width="244dp"
+        android:layout_height="37dp"
+        android:text="Type Gasoline Price"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="229dp"
+        android:layout_height="191dp"
+        app:srcCompat="@drawable/fuel_gauge"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="26dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
