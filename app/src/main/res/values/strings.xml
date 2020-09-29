@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Gasoline or Ethanol</string>
+    <string name="text1">What is the price of gasoline?</string>
+    <string name="textBtnCalculate">Calculate</string>
 </resources>
