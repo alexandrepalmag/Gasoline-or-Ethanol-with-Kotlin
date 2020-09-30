@@ -2,6 +2,7 @@ package com.esofthore.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.SeekBar
 import android.widget.TextView
 import java.util.*
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val seekBar = findViewById<SeekBar>(R.id.seekBar)
         val txtGasoline = findViewById<TextView>(R.id.txtGasoline)
         val txtResult = findViewById<TextView>(R.id.txtResult)
-        val btn = findViewById<Button>(R.id.btncalculate)
+        val btn = findViewById<Button>(R.id.btnCalculate)
 
         // maxim size seekBar
         seekBar.max = 1000
@@ -44,8 +45,8 @@ class MainActivity : AppCompatActivity() {
         })
 
         // button's listener
-        btn.setOnclickListener {
-            var valueResult = (valueGasoline * 0.7/100.0
+        btn.setOnClickListener {
+            var valueResult = (valueGasoline * 0.7)/100.0
             var text = "Refill with ethanol if it costs up to: $ "
             text += formatValue(valueResult)
             txtResult.text = text
@@ -55,11 +56,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun formatValue(value: Double): Any? {
-        return String.format(Locale.US, format = "%.2f", value)
+        return String.format(Locale.US, format = "%.2f")
     }
 }
 
-private fun Any.format(us: Locale, format: String, value: Double): Any? {
-    return String.format(Locale.US, format = "%.2f", value)
-}
 
